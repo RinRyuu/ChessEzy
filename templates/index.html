@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChessEzy LAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <h2>ChessEzy</h2>
+    <div id="status-msg">Connecting to server...</div>
+
+    <div class="players-container">
+        <div id="player-w" class="player-card">White: Waiting...</div>
+        <div id="vs-text">VS</div>
+        <div id="player-b" class="player-card">Black: Waiting...</div>
+    </div>
+
+    <div id="board"></div>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
