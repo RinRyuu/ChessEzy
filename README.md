@@ -62,7 +62,7 @@ CHESSEZY/
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/rinryuu/ChessEzy.git](https://github.com/rinryuu/ChessEzy.git)
+   git clone https://github.com/RinRyuu/ChessEzy.git
    cd ChessEzy
    ```
 
