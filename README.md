@@ -84,24 +84,23 @@ CHESSEZY/
    pip install -r requirements.txt
    ```
    _(Note: Ensure your `requirements.txt` includes `fastapi`, `uvicorn`, `websockets`, `chess`, and `qrcode[pil]`)_
-
+   
 ## 🎮 How to Play
 
 1. Start the FastAPI server:
    ```bash
    python main.py
    ```
-2. A QR code will automatically pop up on your computer screen.
-3. **Player 1:** Scan the QR code with a smartphone (or open the local IP link on a browser) to join the room as White. Enter your name when prompted.
-4. **Player 2:** Scan the same QR code to join as Black.
-5. The board will unlock, and the game begins. When a room is full, the next person to scan the code will automatically be placed in a new, empty room.
-6. Select your Game Mode:
 
-   **Play vs AI:** Instantly start a match against the built-in Python bot. You will be assigned the White pieces.
+2. A QR code will automatically pop up on your computer screen. Scan the QR code with a smartphone (or open the local IP link in a browser).
 
-   **Play vs Human:** You will be placed in a waiting room. Have a second player scan the QR code to join your room, and the game will begin automatically!
+3. Select Game Mode:
 
-_Note: Ensure the devices you are using to play are connected to the same Wi-Fi network as the host machine._
+   **Play vs AI (Bot):** Instantly start a match. You play as White against the built-in Python bot.
+
+   **Play vs Human (LAN):** Enter your name and join the waiting room as White. A second player must scan the QR code to join as Black and begin the match.
+
+_Note: For multiplayer, ensure the devices you are using to play are connected to the same Wi-Fi network as the host machine._
 
 ## 🤝 Contributing
 

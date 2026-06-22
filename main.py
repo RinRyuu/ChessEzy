@@ -13,6 +13,10 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 def get_lan_ip():
+    """
+    Retrieves the local IPv4 address of the host machine.
+    Returns 127.0.0.1 (localhost) if no active network connection is found.
+    """
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         s.connect(("8.8.8.8", 80))
@@ -28,6 +32,10 @@ current_room_id = 1
 
 # --- NEW: Simple Python AI Bot ---
 def get_ai_move(board: chess.Board):
+    """
+    Calculates and returns the next move for the AI bot.
+    Prioritizes checkmate, then captures, and defaults to a random legal move.
+    """
     legal_moves = list(board.legal_moves)
     
     # 1. Look for a winning checkmate move
@@ -49,6 +57,9 @@ def get_ai_move(board: chess.Board):
 
 @app.get("/")
 async def get():
+    """
+    Serves the main HTML interface for the ChessEzy game.
+    """
     html_path = os.path.join(os.path.dirname(__file__), "templates", "index.html")
     with open(html_path, "r", encoding="utf-8") as f:
         return HTMLResponse(f.read())
@@ -57,6 +68,10 @@ async def get():
 # NEW: Added 'mode' parameter to route traffic
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket, name: str = "Anonymous", mode: str = "multi"):
+    """
+    Handles WebSocket connections, matchmaking, and game state routing.
+    Routes players into isolated AI lobbies or pairs them in multiplayer LAN rooms.
+    """
     global current_room_id
     await websocket.accept()
 
