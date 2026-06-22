@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <div id="menu-overlay">
+        <div class="menu-box">
+            <h2>Select Game Mode</h2>
+            <button class="menu-btn" onclick="startGame('multi')">👥 Play vs Human (LAN)</button>
+            <button class="menu-btn" onclick="startGame('ai')">🤖 Play vs AI (Bot)</button>
+        </div>
+    </div>
 
     <h2>ChessEzy</h2>
     <div id="status-msg">Connecting to server...</div>
