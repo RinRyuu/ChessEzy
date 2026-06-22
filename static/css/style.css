@@ -58,3 +58,41 @@ h2 { margin-top: 5px; margin-bottom: 10px; letter-spacing: 2px;}
 .win-text { color: #e74c3c !important; font-size: 1.2em; text-transform: uppercase; }
 
 #board { width: 100%; max-width: 500px; }
+
+/* --- Menu Overlay Styles --- */
+#menu-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(30, 30, 47, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu-box {
+    background: #2a2a40;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.menu-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-btn:hover { background: #45a049; }
+.menu-btn:nth-child(3) { background: #3498db; }
+.menu-btn:nth-child(3):hover { background: #2980b9; }
